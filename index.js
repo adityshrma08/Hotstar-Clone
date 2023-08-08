@@ -1,33 +1,33 @@
 let movies = [
     {
-        name"falcon and the winter soldier",
+        name: "falcon and the winter soldier",
         des:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velt porro et
-        image: "images.slider 2.png"
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velt porro et",
+        image: "images/slider 2.PNG"
     },
     {
-        name"Loki",
+        name: "Loki",
         des:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velt porro et"
-        image: "images.slider 1.png"
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velt porro et",
+        image: "images/slider 1.PNG"
     },
     {
-        name"wanda vision",
+        name: "wanda vision",
         des:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velt porro et"
-        image: "images.slider 3.png"
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velt porro et",
+        image: "images/slider 3.PNG"
     },
     {
-        name"raya and the last dragin",
+        name: "raya and the last dragin",
         des:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velt porro et"
-        image: "images.slider 4.png"
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velt porro et",
+        image: "images/slider 4.PNG"
     },
     {
-        name"luca",
+        name: "luca",
         des:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velt porro et"
-        image: "images.slider 5.png"
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velt porro et",
+        image: "images/slider 5.PNG"
     }
 ];
 
@@ -42,14 +42,14 @@ const createSlide = () => {
     }
 
 
-    let slide = document.createElement('div');
-    var imgElement= document.createElement('img');
-    let content = document.createElement('div');
-    let h1 = document.createElement('h1');
-    let p = document.createElement('p');
+    let slide = document.createElement("div");
+    var imgElement= document.createElement("img");
+    let content = document.createElement("div");
+    let h1 = document.createElement("h1");
+    let p = document.createElement("p");
 
     
-    imgElement.appendChild(document.createTextNode(''));
+    imgElement.appendChild(document.createTextNode(""));
     h1.appendChild(document.createTextNode(movies[slideIndex].name));
     p.appendChild(document.createTextNode(movies[slideIndex].des));
     content.appendChild(h1);
@@ -63,19 +63,19 @@ const createSlide = () => {
     slideIndex++
 
     
-    slide.className= "slider";
-    content.className= "slide-content";
-    h1.className= "movie-title";
-    p.className= "movie-des";
+    slide.className = "slider";
+    content.className = "slide-content";
+    h1.className = "movie-title";
+    p.className = "movie-des";
 
     sliders.push(slide);
  
     if(sliders.length){
-        sliders[0].style.marginLeft = 'calc(-${100 * (sliders.length - 2)}% - ${
-            30* (sliders.length - 2)
-        }px)';
+        sliders[0].style.marginLeft = `calc(-${100 * (sliders.length - 2)}% - ${
+            30 * (sliders.length - 2)
+        }px)`;
     }
-}
+};
 
 for(let i=0; i<3; i++){
     createSlide();
@@ -87,7 +87,7 @@ setInterval(() => {
 
 
 
-const videoCards = [...document.querySelectorAll('.video-card')];
+const videoCards = [...document.querySelectorAll(".video-card")];
 
 videoCards.forEach((item) => {
     item.addEventListener("mouseover", () =>{
@@ -102,19 +102,19 @@ videoCards.forEach((item) => {
 
 
 
-let cardConatainers = [...document.querySelectorAll('.card-conatiner')];
-let preBtns = [...document.querySelectorAll('.pre-btn')];
-let nxBtns = [...document.querySelectorAll('.nxtBtns')];
+let cardContainers = [...document.querySelectorAll(".card-container")];
+let preBtns = [...document.querySelectorAll(".pre-btn")];
+let nxtBtns = [...document.querySelectorAll(".nxt-btn")];
 
-cardConatainers.forEach((items,1)=>{
+cardContainers.forEach((item,i)=>{
     let containerDimensions = item.getBoundingClientRect();
     let containerWidth = containerDimensions.width;
 
-    nxtBtns[i].addEventListener('click',() =>{
+    nxtBtns[i].addEventListener("click",() =>{
         item.scrollLeft += containerWidth-200;
-    })
+    });
 
-    preBtns[i].addEventListener('click',() =>{
+    preBtns[i].addEventListener("click",() =>{
         item.scrollLeft -= containerWidth + 200;
     });
 });

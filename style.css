@@ -19,7 +19,7 @@ body {
     left: 0;
     padding: 0  4%;
     background: #0c111b;
-    z-index: 0;
+    z-index: 9;
     display: flex;
     align-items: center;
 }
@@ -45,6 +45,9 @@ body {
 .right-container {
     display: block;
     margin-left: auto;
+}
+.nav-itmes a:hover {
+    color: lightgray;
 }
 
 .search-box {
@@ -145,7 +148,7 @@ body {
 .movie-des{
     width: 80%;
     line-height: 30px;
-    padding-left: 30px;
+    padding-left: 50px;
     margin-top: 30px;
     opacity: 0.8;
 }
@@ -155,8 +158,8 @@ body {
     width: 92%;
     margin: auto;
     height: 10vw;
+    /* top: 80px; */
     display: flex;
-    top: 80px;
     margin-bottom: 20px;
     justify-content: space-between;
 }
@@ -206,7 +209,7 @@ body {
     position: relative;
     width: 92%;
     padding-left: 10px;
-    height: 220px;
+    height: 200px;
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -215,7 +218,7 @@ body {
     scroll-behavior: smooth;
 }
 
-.card-conatainer::-webkit-scrollbar{
+.card-container::-webkit-scrollbar{
     display: none;
 }
 
@@ -227,7 +230,7 @@ body {
     border-radius: 5px;
     overflow: hidden;
     margin-right: 10px;
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .card-img{
@@ -237,7 +240,7 @@ body {
 }
 
 .card:hover{
-    transform: scale(1:1);
+    transform: scale(1.1);
 }
 
 .card:hover .cardbody{
@@ -289,7 +292,7 @@ body {
 }
 
 .watchlist-btn::before{
-    content:'';
+    content: "";
     position: absolute;
     top: 0;
     left: -5px;
